@@ -59,7 +59,7 @@ To use PhishShield, developed by Sai Vardhan NP, follow these steps:
 1. Clone the repository:
 
    ```
-   git clone --depth=1 https://github.com/praneeth-katuri/PhishShield.git
+   git clone --depth=1 https://github.com/SaiVardhanNP/PhishShield.git
    ```
 
 2. Install the required dependencies:
