@@ -1,8 +1,10 @@
 # PhishShield
 
+PhishShield is a machine learning-powered project developed by Sai Vardhan NP to detect phishing websites using both feature-based and text-based models. This repository provides a comprehensive solution, including dataset details, model training, Flask-based deployment, and a user-friendly web interface.
+
 ## Table of Contents
 
-- [Datasets](#dataset)
+- [Datasets](#datasets)
 - [Machine Learning Models](#machine-learning-models)
 - [Flask Deployment with Caching](#flask-deployment-with-caching)
 - [Webpage Interface](#webpage-interface)
@@ -13,47 +15,46 @@
 
 ## Datasets
 
-The project utilizes two separate datasets, each tailored for training a specific machine learning model.
+PhishShield, created by Sai Vardhan NP, leverages two distinct datasets tailored for training its machine learning models.
 
 ### Dataset for Feature-based Model
 
-- [The dataset used to train the feature-based model](https://www.kaggle.com/datasets/eswarchandt/phishing-website-detector)
+- [Phishing Website Detector Dataset](https://www.kaggle.com/datasets/eswarchandt/phishing-website-detector): Used to train the feature-based model with 29 URL features.
 
 ### Dataset for Text-based Model
 
-- [The dataset used to train the text-based model](https://www.kaggle.com/datasets/harisudhan411/phishing-and-legitimate-urls)
+- [Phishing and Legitimate URLs Dataset](https://www.kaggle.com/datasets/harisudhan411/phishing-and-legitimate-urls): Used to train the text-based model by analyzing URL text content.
 
 ## Machine Learning Models
 
-The repository includes two machine learning models:
+PhishShield, developed by Sai Vardhan NP, incorporates two machine learning models built with Python and scikit-learn:
 
-### Feature-based Model:
+### Feature-based Model
 
-This model is built using Python and popular libraries such as scikit-learn. It employs a supervised learning approach, where the model learns from labeled examples to make predictions based on the 29 URL features.
+This model employs a supervised learning approach, utilizing 29 URL features to classify websites as phishing or legitimate. It leverages scikit-learn pipelines with custom transformers for data preprocessing and grid search with cross-validation for hyperparameter tuning.
 
-### Text-based Model:
+### Text-based Model
 
-This model also uses Python and machine learning libraries to analyze the text content of URLs. It extracts relevant features from the text and trains a separate classifier to detect phishing websites.
+This model analyzes the text content of URLs, extracting relevant features to train a classifier for phishing detection. It also uses scikit-learn pipelines and grid search for optimal performance.
 
-The training process involves utilizing scikit-learn pipelines, which consist of custom transformers for preprocessing data before feeding it to the models. Grid search with cross-validation is used to tune hyperparameters and optimize model performance.
-
-Each model is evaluated using metrics such as accuracy, precision, recall, and F1-score to assess its effectiveness in distinguishing between phishing and legitimate websites.
+Both models are evaluated using metrics such as accuracy, precision, recall, and F1-score to ensure robust detection of phishing websites.
 
 ## Flask Deployment with Caching
 
-Both machine learning models are deployed using Flask, a lightweight web framework for Python. The Flask app exposes endpoints to make predictions using the trained models. Additionally, caching to disk is implemented to improve performance by storing results of previous predictions.
+Sai Vardhan NP has deployed both models using Flask, a lightweight Python web framework. The Flask application exposes endpoints for real-time predictions, with disk-based caching to enhance performance by storing results of prior predictions.
 
 ## Webpage Interface
 
-The web interface is built using HTML, CSS, and Bootstrap to provide a user-friendly experience. Users can input a URL and receive predictions on whether it is a phishing website or not.
+The web interface, designed by Sai Vardhan NP, is built with HTML, CSS, and Bootstrap for a seamless user experience. Users can input a URL to receive predictions on whether it is a phishing website.
+
 <div align="center">
-    <img src="screenshots/phishing.gif" alt="Image 1" width="600" height="300" style="margin-right: 20px;">
-    <img src="screenshots/legitimate.gif" alt="Image 2" width="600" height="300" style="margin-right: 20px;">
+    <img src="screenshots/phishing.gif" alt="Phishing Detection" width="600" height="300" style="margin-right: 20px;">
+    <img src="screenshots/legitimate.gif" alt="Legitimate Detection" width="600" height="300" style="margin-right: 20px;">
 </div>
 
 ## Usage
 
-To use the PhishShield, follow these steps:
+To use PhishShield, developed by Sai Vardhan NP, follow these steps:
 
 1. Clone the repository:
 
@@ -67,42 +68,41 @@ To use the PhishShield, follow these steps:
    pip install -r requirements.txt
    ```
 
-3. Edit `.env` file and enter your [reCAPTCHA Keys](https://developers.google.com/recaptcha/intro) and `Flask Secret Key`
+3. Configure the `.env` file with your [reCAPTCHA Keys](https://developers.google.com/recaptcha/intro) and Flask Secret Key. To generate a Flask Secret Key, run:
 
-   To generate `Flask Secret Key` run the below code in terminal and copy the Output key obtained in `.env` file
-    
    ```
    python -c 'import secrets; print(secrets.token_hex(16))'
    ```
 
+   Copy the generated key into the `.env` file.
 
-4. To start the Flask application, run the following command in your terminal:
+4. Start the Flask application:
 
    ```
    python app.py
    ```
 
-5. To access the webpage interface, open `http://127.0.0.1:5000` in your web browser.
+5. Access the web interface at `http://127.0.0.1:5000` in your browser.
 
 ## Results
 
-The performance of the phishing detection models is evaluated using metrics such as accuracy, precision, recall, and F1-score. The results demonstrate the effectiveness of each model in distinguishing between phishing and legitimate websites.
+The performance of PhishShield's models, developed by Sai Vardhan NP, is measured using accuracy, precision, recall, and F1-score, demonstrating their effectiveness in identifying phishing websites.
 
 ### Feature-based Model
 
 <div align="center">
-    <img src="screenshots/result1.png" alt="Image 1" width="900" height="350" style="margin-right: 20px;">
+    <img src="screenshots/result1.png" alt="Feature-based Model Results" width="900" height="350" style="margin-right: 20px;">
 </div>
 
 ### Text-based Model
 
 <div align="center">
-    <img src="screenshots/result2.png" alt="Image 2" width="600" height="350" style="margin-right: 20px;">
+    <img src="screenshots/result2.png" alt="Text-based Model Results" width="600" height="350" style="margin-right: 20px;">
 </div>
 
 ## Contributing
 
-Contributions to this project are welcome! If you have ideas for improvements or new features, feel free to open an issue or submit a pull request.
+Contributions to PhishShield, created by Sai Vardhan NP, are welcome! If you have suggestions for improvements or new features, please open an issue or submit a pull request.
 
 ## License
 
