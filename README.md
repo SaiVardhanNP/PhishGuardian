@@ -11,7 +11,6 @@ PhishShield is a machine learning-powered project developed by Sai Vardhan NP to
 - [Usage](#usage)
 - [Results](#results)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Datasets
 
@@ -104,6 +103,4 @@ The performance of PhishShield's models, developed by Sai Vardhan NP, is measure
 
 Contributions to PhishShield, created by Sai Vardhan NP, are welcome! If you have suggestions for improvements or new features, please open an issue or submit a pull request.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
